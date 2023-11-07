@@ -1,0 +1,15 @@
+fetch('http://localhost:8000/api/', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(give_object)
+                        })
+                        .then(() => {
+                        
+                       
+        
+                        })
+                        .catch(err=>
+                        {
+                            console.log(err);
+                            
+                        })
