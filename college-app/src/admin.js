@@ -15,6 +15,9 @@ const Admin = () => {
         <ul>
         <Link to="/enrol">Enrol </Link>
         </ul>
+        <ul>
+        <Link to="/timetable">Timetable </Link>
+        </ul>
         
         </div>
       );

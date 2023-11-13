@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 import { useContext,useState } from "react";
+import StudentNavbar from "./studentnav";
 
 import ViewAttendance from "./viewattendance";
 import ViewMarks from "./viewmarks";
@@ -18,6 +19,8 @@ const StudentCourse = () => {
     return ( 
         
         <div>
+            <StudentNavbar/>
+
             
             
             

@@ -11,6 +11,7 @@ import StudentCourse from "./studentcourse";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState  } from "react";
 import React from 'react';
+import Timetable from "./timetable";
 
 export const IDContext = React.createContext();
 function App() {
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route exact path="/add">
               <Adduser />
+            </Route>
+            <Route exact path="/timetable">
+              <Timetable />
             </Route>
             
             <Route exact path="/addcourse">

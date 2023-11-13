@@ -18,7 +18,7 @@ const Teacher = () => {
         <div className="course-preview" key={course.enrol_id} >
           <Link to={`/teacher/courses/${course.enrol_id}`}>
             <h2>{ course.course_code }</h2>
-            <p mt-6 text-lg leading-8 text-gray-300>Sem:{ course.sem } Batch: { course.batch }</p>
+            <p mt-6 text-lg leading-8 text-gray-300>Sem:{ course.semester } Batch: { course.batch }</p>
           </Link>
         </div>
       ))}

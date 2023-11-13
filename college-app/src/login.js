@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import {IDContext} from "./App"
 import { useContext } from "react";
+import myImage from './login.jpeg';
+import './styles/login.css';
 const Login = () => {
   const [id, setID] = useState();
   const [status, setstatus] = useState('');
@@ -46,29 +48,39 @@ const Login = () => {
       })
   }
   return (
-    <div >
-      <h2>login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>id:</label>
+    
+    <div className="container">
+      
+      <form className="form "onSubmit={handleSubmit}>
+      <h2>SIGN IN</h2>
+        
         <input 
+          className="box"
           type="text" 
           required 
           value={id}
+          placeholder="Enter id"
           onChange={(e) => setID(e.target.value)}
         />
-        <label>password:</label>
+        
         <input 
+          className="box"
           type="password" 
           required 
           value={password}
+          placeholder="Enter password"
           onChange={(e) => setpassword(e.target.value)}
         />
         
         
-        <button>Login</button>
+        <button id="submit">Login</button>
       </form>
+      <div className="side">
+      <img src={myImage} alt=""/>
+    </div>
       <p>{status}</p>
     </div>
+    
   );
 }
  
