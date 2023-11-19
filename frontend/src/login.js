@@ -8,7 +8,7 @@ const Login = () => {
   const [id, setID] = useState();
   const [status, setstatus] = useState('');
   const [password, setpassword] = useState('');
-  const { UserID, setUserID }=useContext(IDContext);
+  const { UserID, setUserID,sem,setsem,batch,setbatch }=useContext(IDContext);
 
 
   
@@ -34,7 +34,7 @@ const Login = () => {
           setUserID(data.id);
           if(data.type==='admin') history.push('/admin');
           else if(data.type==='teacher') history.push('/teacher');
-          else history.push('/student');
+          else {setbatch(data.batch);setsem(data.semester);history.push('/student');}
         }
         else {console.log("login fail");setstatus("Invalid Password");}
 

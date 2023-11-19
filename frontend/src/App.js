@@ -8,14 +8,18 @@ import Course from "./course";
 import Teacher from "./teacher";
 import Addcourse from "./addcourse";
 import StudentCourse from "./studentcourse";
+import TimetableStudent from "./timetablestudent";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState  } from "react";
 import React from 'react';
-import Timetable from "./timetable";
+
+import TimetableActions from "./timetableActions";
 
 export const IDContext = React.createContext();
 function App() {
   const [UserID, setUserID] = useState('--');
+  const [sem, setsem] = useState('');
+  const [batch, setbatch] = useState('');
   return (
     <Router>
       <div className="App">
@@ -23,7 +27,8 @@ function App() {
         <div className="content">
           <Switch>
             
-          <IDContext.Provider value={{ UserID, setUserID}}>
+          <IDContext.Provider value={{ UserID, setUserID,sem,setsem,batch,setbatch}}>
+          
             <Route exact path="/student">
               <Student />
               </Route>
@@ -34,7 +39,7 @@ function App() {
               <Adduser />
             </Route>
             <Route exact path="/timetable">
-              <Timetable />
+              <TimetableActions />
             </Route>
             
             <Route exact path="/addcourse">
@@ -49,6 +54,11 @@ function App() {
               <Route exact path="/student/courses/:enrol_id">
               <StudentCourse/>
               </Route>
+              <Route exact path="/student/timetable">
+              <TimetableStudent/>
+              </Route>
+              
+              
             
             <Route exact path="/">
               <Login />

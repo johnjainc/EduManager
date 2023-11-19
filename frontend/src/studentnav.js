@@ -6,6 +6,7 @@ const StudentNavbar = () => {
       
       <ul className="nav-list">
       <li className="nav-item"><Link to="/student">Home</Link></li>
+      <li className="nav-item"><Link to="/student/timetable">Timetable</Link></li>
       <li className="nav-item"><Link to="/">Logout</Link></li>
        
         

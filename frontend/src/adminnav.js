@@ -16,6 +16,9 @@ const AdminNavbar = () => {
           <Link to="/enrol">Enrol </Link>
         </li>
         <li className="nav-item">
+          <Link to="/timetable">Timetable </Link>
+        </li>
+        <li className="nav-item">
           <Link to="/">Logout </Link>
         </li>
         
